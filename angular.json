@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "filterTablePeriodic"
+  "defaultProject": "filterTablePeriodic",
+  "cli": {
+    "analytics": "5f83a283-4e96-492a-bb9e-9d51aa23cee9"
+  }
 }
