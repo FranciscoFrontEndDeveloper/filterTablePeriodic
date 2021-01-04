@@ -1,0 +1,47 @@
+.containerMain
+  display: grid
+  grid-template-rows: 20% 1fr auto
+  width: 18.75rem
+  height: 100vh
+  background: #001D4A
+  color: #ffffff
+  padding-left: 10px
+.contMainTitle
+  display: grid
+  align-items: center
+  justify-content: center
+  h1
+    font-size: 1.875rem
+    font-weight: bold
+    text-transform: capitalize
+    text-align: center
+    width: 90%
+    border-bottom: 0.125rem solid #ffffff
+    padding-bottom: 1.25rem
+.contMainMenu
+  ul
+    li
+      list-style: none
+      padding: 20px 0
+      &:hover
+        background: rgba(255, 255, 255, 0.5)
+      select
+        width: 90%
+        background: none
+        color: white
+        border: none
+      option
+        background: none
+        color: black
+        text-transform: capitalize
+      a
+        text-decoration: none
+        color: white
+.contMainButton
+  display: grid
+  justify-content: end
+  button
+    widows: 3.125rem
+    height: 3.125rem
+    border-radius: 50%
+    background: none
