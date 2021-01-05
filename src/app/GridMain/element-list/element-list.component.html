@@ -1,16 +1,30 @@
 <section class="containerMain">
-<section class="contMainTitle">titulo</section>
-<section class="contMainHome">inicio</section>
+<section class="contMainTitle">
+  <div>
+    <input type="text" placeholder="Ingrese el numero atomico del elemento que desea filtrar">
+    <button>filtrar</button>
+  </div>
+  <div>
+    <select>
+      <option value="" select>seleccione un grupo</option>
+      <option value="">opciones</option>
+      <option value="">opciones</option>
+    </select>
+  </div>
+</section>
+<section class="contMainHome">
+  <app-home-button></app-home-button>
+</section>
 <section class="contMainTable">
   <table >
     <tr>
-      <th>Firstname</th>
-      <th>Lastname</th>
-      <th>Age</th>
-      <th>Firstname</th>
-      <th>Lastname</th>
-      <th>Age</th>
-      <th>Age</th>
+      <th>símbolo</th>
+      <th>nombre</th>
+      <th>masa atomica</th>
+      <th>número atómico</th>
+      <th>estado</th>
+      <th>estado</th>
+      <th>año de descubrimiento</th>
     </tr>
     <tr>
       <td>Jill</td>
@@ -41,4 +55,7 @@
     </tr>
   </table>
 </section>
+<footer>
+  <app-credits></app-credits>
+</footer>
 </section>
