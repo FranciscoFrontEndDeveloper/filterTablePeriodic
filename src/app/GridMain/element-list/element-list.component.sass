@@ -6,22 +6,29 @@
   height: 100vh
 .contMainTable
   margin-top: 30px
+  overflow-y: scroll
   table
     width: 100%
     border-collapse: collapse
     tr
+      // display: grid
+      // grid-template-columns: repeat(7,1fr)
       th
         background: #001D4A
         color: white
         padding: 0.625rem 0
         text-align: left
         text-transform: capitalize
+        position: sticky
+        top: 0
         &:first-child
           border-top-left-radius: 0.625rem
           padding-left: 1.25rem
         &:last-child
           border-top-right-radius: 0.625rem
       td
+        padding: 10px 0
+        border-bottom: 1px solid #ccc
         &:first-child
           padding-left: 1.25rem
 .contMainTitle
