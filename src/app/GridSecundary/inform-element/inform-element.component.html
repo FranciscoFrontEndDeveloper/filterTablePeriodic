@@ -1,13 +1,67 @@
 <section class="containerMain">
-  <header class="contMainTitle">titulo</header>
+  <header class="contMainTitle">
+    <app-title-component [currentTitle]="title"></app-title-component>
+  </header>
   <section class="contMainHome">
     <app-home-button></app-home-button>
   </section>
   <section class="contaMainForm">
     <form>
-      <div>columnas</div>
-      <div>columnas</div>
-      <div>columnas</div>
+      <div class="subContMainForm1">
+        <h4>datos iniciales</h4>
+        <div>
+          <label for="">elemento</label>
+          <input type="text">
+        </div>
+        <div>
+          <label for="">nombre de quien llama</label>
+          <input type="text">
+        </div>
+        <div>
+          <label for="">telefono</label>
+          <input type="text">
+        </div>
+        <div>
+          <label for="">cargo</label>
+          <select name="" id="">
+            <option value="">escoger</option>
+            <option value="">escoger</option>
+            <option value="">escoger</option>
+            <option value="">escoger</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="subContMainForm2">
+        <h4>datos de la falla</h4>
+        <div>
+          <label for="">descripcion del usuario</label>
+          <textarea name="" id="" cols="" rows=""></textarea>
+        </div>
+        <h4>diagnostico del agente</h4>
+        <div>
+          <label for="">Diagnostico</label>
+          <select name="" id="">
+            <option value="">escoger</option>
+            <option value="">escoger</option>
+            <option value="">escoger</option>
+            <option value="">escoger</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="subContMainForm3">
+        <h4>procedimiento de soporte sujerido</h4>
+        <div>
+          <ol>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+          </ol>
+        </div>
+      </div>
     </form>
   </section>
   <section class="contaMainNotes">
@@ -23,13 +77,13 @@
   </section>
   <section class="contaMainButtons">
     <div>
-      <input type="button" value="boton">
+      <input type="button" value="ver notas">
     </div>
     <div>
-      <input type="button" value="boton">
+      <input type="button" value="ver notas y guardar">
     </div>
     <div>
-      <input type="button" value="boton">
+      <input type="button" value="guardar notas">
     </div>
   </section>
 </section>

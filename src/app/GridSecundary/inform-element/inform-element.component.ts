@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inform-element.component.sass']
 })
 export class InformElementComponent implements OnInit {
-
+public title = 'Informe de gestion sobre el elemento';
   constructor() { }
 
   ngOnInit(): void {
