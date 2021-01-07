@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -6,10 +7,10 @@ import { InformElementComponent } from './inform-element/inform-element.componen
 
 
 @NgModule({
-  declarations: [InformElementComponent],
+  declarations: [InformElementComponent, ],
   imports: [
     CommonModule,
-    InformElementRoutingModule
+    InformElementRoutingModule,
   ]
 })
 export class InformElementModule { }
