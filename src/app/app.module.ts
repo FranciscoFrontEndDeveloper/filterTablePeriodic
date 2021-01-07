@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { GridMainComponent } from './GridMain/grid-main/grid-main.component';
 import { NavbarLeftComponent } from './GridMain/navbar-left/navbar-left.component';
 import { ElementListComponent } from './GridMain/element-list/element-list.component';
-import { HomeButtonComponent } from './GridMain/home-button/home-button.component';
 import { CreditsComponent } from './GridMain/credits/credits.component';
 import { FormsModule } from '@angular/forms';
 
@@ -16,7 +15,6 @@ import { FormsModule } from '@angular/forms';
     GridMainComponent,
     NavbarLeftComponent,
     ElementListComponent,
-    HomeButtonComponent,
     CreditsComponent
   ],
   imports: [
