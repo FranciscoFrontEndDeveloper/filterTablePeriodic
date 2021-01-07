@@ -4,10 +4,11 @@ import { CommonModule } from '@angular/common';
 
 import { InformElementRoutingModule } from './inform-element-routing.module';
 import { InformElementComponent } from './inform-element/inform-element.component';
+import { CalculatorComponent } from './calculator/calculator.component';
 
 
 @NgModule({
-  declarations: [InformElementComponent, ],
+  declarations: [InformElementComponent, CalculatorComponent, ],
   imports: [
     CommonModule,
     InformElementRoutingModule,

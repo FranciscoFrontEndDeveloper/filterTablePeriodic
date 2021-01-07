@@ -8,6 +8,10 @@ const routes: Routes = [
    path: 'inform',
    loadChildren: () => import('./GridSecundary/inform-element.module').then(m => m.InformElementModule)
  },
+ {
+   path: 'calculator',
+   loadChildren: () => import('./GridSecundary/inform-element.module').then(m => m.InformElementModule)
+ },
 ];
 
 @NgModule({
