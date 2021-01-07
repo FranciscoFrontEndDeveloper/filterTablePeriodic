@@ -23,6 +23,14 @@
     li
       list-style: none
       padding: 20px 0
+      text-transform: capitalize
+      display: grid
+      grid-template-columns: auto 1fr
+      column-gap: 20px
+      align-items: center
+      img
+        width: 24px
+        height: 24px
       &:hover
         background: rgba(255, 255, 255, 0.5)
       select
@@ -30,6 +38,7 @@
         background: none
         color: white
         border: none
+        text-transform: capitalize
       option
         background: none
         color: black
@@ -40,8 +49,11 @@
 .contMainButton
   display: grid
   justify-content: end
-  button
-    widows: 3.125rem
-    height: 3.125rem
+  input
+    width: 16px
+    height: 16px
     border-radius: 50%
+    padding: 8px
+    border: 1px solid white
     background: none
+    margin-right: 10px

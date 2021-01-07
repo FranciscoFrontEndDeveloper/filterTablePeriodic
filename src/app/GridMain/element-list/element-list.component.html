@@ -5,10 +5,8 @@
     <button>filtrar</button>
   </div>
   <div>
-    <select >
-      <option value="" select>seleccione un grupo</option>
-      <option *ngFor="let element of elements" value="{{element.groupBlock}}">{{element.groupBlock}}</option>
-
+    <select (change)="seleccion()" [(ngModel)]="opcionElegida" [ngStyle]="{background: numberStyle}">
+      <option *ngFor="let optionSelected of optionSelecteds" [value]="optionSelected.optionss" selected>{{optionSelected.optionss}}</option>
     </select>
   </div>
 </section>
@@ -18,13 +16,13 @@
 <section class="contMainTable">
   <table >
     <tr>
-      <th>número atómico</th>
-      <th>símbolo</th>
-      <th>nombre</th>
-      <th>masa atomica</th>
-      <th>estado</th>
-      <th>grupo</th>
-      <th>año de descubrimiento</th>
+      <th [ngStyle]="{background: numberStyle}">número atómico</th>
+      <th [ngStyle]="{background: numberStyle}">símbolo</th>
+      <th [ngStyle]="{background: numberStyle}">nombre</th>
+      <th [ngStyle]="{background: numberStyle}">masa atomica</th>
+      <th [ngStyle]="{background: numberStyle}">estado</th>
+      <th [ngStyle]="{background: numberStyle}">grupo</th>
+      <th [ngStyle]="{background: numberStyle}">año de descubrimiento</th>
     </tr>
     <tr *ngFor="let element of elements">
       <td>{{element.atomicNumber}}</td>

@@ -11,16 +11,24 @@
     width: 100%
     border-collapse: collapse
     tr
+      border-bottom: 1px solid #ccc
+      &:hover
+        background: #498df3
+        color: white
       // display: grid
       // grid-template-columns: repeat(7,1fr)
       th
         background: #001D4A
+        font-weight: bold
+        font-size: 18px
+        height: 40px
         color: white
         padding: 0.625rem 0
         text-align: left
         text-transform: capitalize
         position: sticky
         top: 0
+        transition: all .5s
         &:first-child
           border-top-left-radius: 0.625rem
           padding-left: 1.25rem
@@ -28,7 +36,7 @@
           border-top-right-radius: 0.625rem
       td
         padding: 10px 0
-        border-bottom: 1px solid #ccc
+        // border-bottom: 1px solid #ccc
         &:first-child
           padding-left: 1.25rem
 .contMainTitle
@@ -42,12 +50,17 @@
       border: 2px solid #ccc
       border-radius: 5px
       padding: 10px 0 10px 20px
+      font-size: 10px
     button
       text-transform: capitalize
-      padding: 10px 20px
+      padding: 5px 20px
       margin-left: 20px
       border-radius: 10px
       background: none
+      font-size: 18px
+      border: 2px solid #23CE6B
+      color: #23CE6B
+      font-weight: bold
   div:nth-child(2)
     select
       background: #001D4A
@@ -55,8 +68,12 @@
       text-transform: capitalize
       width: 300px
       font-weight: bold
+      font-size: 18px
       padding: 10px 10px
       border-radius: 10px
+      border: none
+      transition: all .5s
 .contMainHome
   display: grid
   align-items: end
+

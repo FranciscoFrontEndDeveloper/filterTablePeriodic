@@ -8,6 +8,7 @@ import { NavbarLeftComponent } from './GridMain/navbar-left/navbar-left.componen
 import { ElementListComponent } from './GridMain/element-list/element-list.component';
 import { HomeButtonComponent } from './GridMain/home-button/home-button.component';
 import { CreditsComponent } from './GridMain/credits/credits.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CreditsComponent } from './GridMain/credits/credits.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
