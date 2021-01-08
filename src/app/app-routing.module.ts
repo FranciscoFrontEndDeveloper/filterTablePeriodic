@@ -5,11 +5,11 @@ import { GridMainComponent } from './GridMain/grid-main/grid-main.component';
 const routes: Routes = [
  { path: '', component: GridMainComponent },
  {
-   path: 'inform',
+   path: '',
    loadChildren: () => import('./GridSecundary/inform-element.module').then(m => m.InformElementModule)
  },
  {
-   path: 'calculator',
+   path: '',
    loadChildren: () => import('./GridSecundary/inform-element.module').then(m => m.InformElementModule)
  },
  { path: '**', component: GridMainComponent }
