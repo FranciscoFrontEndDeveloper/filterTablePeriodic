@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalculatorComponent implements OnInit {
   public title = 'calculadora de elementos';
-  constructor() { }
+  public dateCurrent: {};
+  constructor() {
+    this.dateCurrent = new Date().getFullYear();
+   }
 
   ngOnInit(): void {
   }

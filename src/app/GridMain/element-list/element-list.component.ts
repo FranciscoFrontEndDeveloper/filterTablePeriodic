@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ElementsService } from 'src/app/Services/elements.service';
 import { InterfazElement } from '../../Interfases/interfaz-element';
+import { element } from 'protractor';
 
 @Component({
   selector: 'app-element-list',
@@ -9,16 +10,19 @@ import { InterfazElement } from '../../Interfases/interfaz-element';
 })
 export class ElementListComponent implements OnInit {
 public elements: any = [];
+public elementsNumber: [] = [];
 public opcionElegida: string;
 public optionSelecteds: any[];
 public numberStyle: string;
 public prueba1: string;
 public prueba2: string;
+public numberFilter: null;
   constructor(private elementsService: ElementsService) {
     this.opcionElegida = '';
     this.numberStyle = '';
     this.prueba1 = 'seleccion';
     this.prueba2 = 'no seleccion';
+    this.numberFilter = null;
     this.optionSelecteds = [
       {id: 1, optionss: 'seleccione un grupo'},
       {id: 2, optionss: 'metales alcalinos'},
@@ -44,6 +48,7 @@ public prueba2: string;
     this.elements = this.elementsService.Elements;
     // console.log(this.elements);
   }
+
 
   seleccion(): void{
     switch (this.opcionElegida){
@@ -90,4 +95,6 @@ public prueba2: string;
     }
     console.log(this.opcionElegida);
   }
+
+
 }

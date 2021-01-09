@@ -1,3 +1,29 @@
+<main class="containerMain">
+  <header class="contMainTitle">
+    <app-title-component [currentTitle]="title"></app-title-component>
+  </header>
+  <nav class="contMainHome">
+    <app-home-button></app-home-button>
+  </nav>
+  <section class="contInstCal">
+    <div>
+      <h4>instrucciones de uso</h4>
+      <ol>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+      </ol>
+      <form action="">
+        <div><label for="">titulos</label><input type="text" name="dateCurrent" [(ngModel)]="dateCurrent"></div>
+        <div><label for="">titulos</label><input type="date" name="dateCurrent" [(ngModel)]="dateCurrent " (ngModelChange)="dateCurrent=$event"></div>
+        <div><label for="">titulos</label><input type="button" value="calcular"></div>
+        <div><strong>resultado</strong><span>80<strong>  tokens</strong></span></div>
+      </form>
+    </div>
+  </section>
+  <section class="contFormCalc">
 
-<app-title-component [currentTitle]="title"></app-title-component>
-<app-home-button></app-home-button>
+  </section>
+</main>

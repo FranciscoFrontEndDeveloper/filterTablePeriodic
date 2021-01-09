@@ -3,7 +3,7 @@
   height: 100vh
   margin: 0 auto
   display: grid
-  grid-template-rows: 12% auto repeat(2,1fr) 10%
+  grid-template-rows: 12% auto repeat(2,1fr)
   header
     display: grid
     align-items: center
@@ -17,6 +17,11 @@
     height: 100%
     h4
       text-transform: capitalize
+    input, textarea, select
+      border: 2px solid #cccccc
+      border-radius: 5px
+    textarea
+      resize: none
   .subContMainForm1
     display: grid
     grid-template-rows: auto repeat(4,1fr)

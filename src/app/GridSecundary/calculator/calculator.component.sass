@@ -1,0 +1,42 @@
+.containerMain
+  display: grid
+  width: 96%
+  margin: 0 auto
+  height: 100vh
+  grid-template-rows: 12% auto repeat(2,1fr)
+.contMainTitle
+  display: grid
+  place-self: center
+.contInstCal
+  border-bottom: 3px solid #ccc
+  padding: 20px 0
+  h4
+    text-transform: uppercase
+  ol
+    margin-left: 20px
+    li
+      padding: 10px 0
+  form
+    display: grid
+    grid-template-columns: repeat(4,1fr)
+    column-gap: 20px
+    padding: 10px 0
+    div
+      display: grid
+      grid-template-rows: repeat(2,1fr)
+      input
+        padding: 5px
+        border: 2px solid #ccc
+        border-radius: 5px
+      input[type="button"]
+        border: 2px solid lime
+        background: none
+        text-transform: capitalize
+        font-weight: bold
+        color: limer
+        width: 100px
+        color: lime
+        transition: all .5s ease
+        &:hover
+          background: lime
+          color: white
