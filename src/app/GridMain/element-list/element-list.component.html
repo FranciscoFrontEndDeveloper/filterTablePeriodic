@@ -1,12 +1,23 @@
 <section class="containerMain">
 <section class="contMainTitle">
   <div>
-    <input type="text" placeholder="Ingrese el numero atomico del elemento que desea filtrar" [(ngModel)]="numberFilter">
+    <input type="number" placeholder="Ingrese el numero atomico del elemento que desea filtrar" [(ngModel)]="numberAtomic"  (input)="filterAtomicNumber(numberAtomic)">
     <button>filtrar</button>
   </div>
   <div>
     <select (change)="seleccion()" [(ngModel)]="opcionElegida" [ngStyle]="{background: numberStyle}">
-      <option *ngFor="let optionSelected of optionSelecteds" [value]="optionSelected.optionss" selected>{{optionSelected.optionss}}</option>
+      <option value="" selected>seleccione un grupo</option>
+      <option value="metales alcalinos">metales alcalinos</option>
+      <option value="alcalinoterreos">alcalinoterreos</option>
+      <option value="metales de transicion">metales de transicion</option>
+      <option value="otros metales">otros metales</option>
+      <option value="metaloides">metaloides</option>
+      <option value="no metales">no metales</option>
+      <option value="halogenos">halogenos</option>
+      <option value="gases nobles">gases nobles</option>
+      <option value="lactanidos">lactanidos</option>
+      <option value="actinidos">actinidos</option>
+      <!-- <option *ngFor="let optionSelected of optionSelecteds" [value]="optionSelected.optionss" selected>{{optionSelected.optionss}}</option> -->
     </select>
   </div>
 </section>
@@ -24,7 +35,7 @@
       <th [ngStyle]="{background: numberStyle}">grupo</th>
       <th [ngStyle]="{background: numberStyle}">año de descubrimiento</th>
     </tr>
-    <tr *ngFor="let element of elements">
+    <tr *ngFor="let element of elements  ">
       <td>{{element.atomicNumber}}</td>
       <td>{{element.symbol}}</td>
       <td>{{element.name}}</td>

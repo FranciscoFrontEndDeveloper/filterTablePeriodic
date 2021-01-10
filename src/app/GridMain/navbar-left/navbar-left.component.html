@@ -5,11 +5,19 @@
 <section class="contMainMenu">
 <ul>
   <li><img src="../../../assets/math-book.svg" alt="">
-    <select id="cars">
-      <option value="" selected>Seleccione una definicion</option>
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="vw">VW</option>
+    <select>
+      <option value="" selected>seleccione una definicion</option>
+      <option value="metales alcalinos">metales alcalinos</option>
+      <option value="alcalinoterreos">alcalinoterreos</option>
+      <option value="metales de transicion">metales de transicion</option>
+      <option value="otros metales">otros metales</option>
+      <option value="metaloides">metaloides</option>
+      <option value="no metales">no metales</option>
+      <option value="halogenos">halogenos</option>
+      <option value="gases nobles">gases nobles</option>
+      <option value="lactanidos">lactanidos</option>
+      <option value="actinidos">actinidos</option>
+      <!-- <option *ngFor="let optionSelected of optionSelecteds" [value]="optionSelected.optionss" selected>{{optionSelected.optionss}}</option> -->
     </select>
   </li>
   <li><img src="../../../assets/portapapeles.svg" alt=""><a href="#" [routerLink]="['/inform']" routerLinkActive="router-link-active" >generador de informes de

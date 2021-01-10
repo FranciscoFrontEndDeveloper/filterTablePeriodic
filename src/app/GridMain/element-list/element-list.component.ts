@@ -1,7 +1,8 @@
+import { NumberAtomicPipe } from './../../Pipes/number-atomic.pipe';
 import { Component, OnInit } from '@angular/core';
 import { ElementsService } from 'src/app/Services/elements.service';
 import { InterfazElement } from '../../Interfases/interfaz-element';
-import { element } from 'protractor';
+
 
 @Component({
   selector: 'app-element-list',
@@ -9,48 +10,42 @@ import { element } from 'protractor';
   styleUrls: ['./element-list.component.sass']
 })
 export class ElementListComponent implements OnInit {
-public elements: any = [];
-public elementsNumber: [] = [];
+public elements: InterfazElement[];
+// public elements2: any = [];
 public opcionElegida: string;
-public optionSelecteds: any[];
 public numberStyle: string;
-public prueba1: string;
-public prueba2: string;
-public numberFilter: null;
+public numberAtomic: number;
+public newElements: any;
   constructor(private elementsService: ElementsService) {
     this.opcionElegida = '';
     this.numberStyle = '';
-    this.prueba1 = 'seleccion';
-    this.prueba2 = 'no seleccion';
-    this.numberFilter = null;
-    this.optionSelecteds = [
-      {id: 1, optionss: 'seleccione un grupo'},
-      {id: 2, optionss: 'metales alcalinos'},
-      {id: 3, optionss: 'alcalinoterreos'},
-      {id: 4, optionss: 'metales de transicion'},
-      {id: 5, optionss: 'otros metales'},
-      {id: 6, optionss: 'metaloides'},
-      {id: 7, optionss: 'no metales'},
-      {id: 8, optionss: 'halogenos'},
-      {id: 9, optionss: 'gases nobles'},
-      {id: 10, optionss: 'lactanidos'},
-      {id: 11, optionss: 'actinidos'},
-    ];
+    this.numberAtomic = 0;
+    this.newElements = [];
+    this.elements = [];
    }
 
   ngOnInit(): void {
     this.getAllElements();
-    console.log(this.opcionElegida);
+
   }
 
 
   getAllElements(): void {
-    this.elements = this.elementsService.Elements;
-    // console.log(this.elements);
+    this.elements = this.elementsService.getAllElements();
   }
 
+  filterAtomicNumber(numberAtomic: number): InterfazElement[] {
+    if (numberAtomic > 0) {
+      this.elements = this.elementsService.filterAtomicNumber(numberAtomic);
+      console.log(this.elements);
+      console.log(this.numberAtomic);
+    } else {
+      this.getAllElements();
+    }
+    return this.elements;
+  }
 
-  seleccion(): void{
+  seleccion(): any{
     switch (this.opcionElegida){
       case 'metales alcalinos': {
         this.numberStyle = '#C2000B';
@@ -90,6 +85,10 @@ public numberFilter: null;
       }
       case 'actinidos': {
         this.numberStyle = '#2E58A6';
+        break;
+      }
+      case '': {
+        this.numberStyle = '#001D4A';
         break;
       }
     }

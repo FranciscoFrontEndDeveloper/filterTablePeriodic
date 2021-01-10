@@ -8,6 +8,7 @@ import { NavbarLeftComponent } from './GridMain/navbar-left/navbar-left.componen
 import { ElementListComponent } from './GridMain/element-list/element-list.component';
 import { CreditsComponent } from './GridMain/credits/credits.component';
 import { FormsModule } from '@angular/forms';
+import { NumberAtomicPipe } from './Pipes/number-atomic.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     GridMainComponent,
     NavbarLeftComponent,
     ElementListComponent,
-    CreditsComponent
+    CreditsComponent,
+    NumberAtomicPipe
   ],
   imports: [
     BrowserModule,
