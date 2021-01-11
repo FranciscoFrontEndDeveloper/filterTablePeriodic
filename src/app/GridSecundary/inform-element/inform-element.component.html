@@ -6,46 +6,48 @@
     <app-home-button></app-home-button>
   </section>
   <section class="contaMainForm">
-    <form>
+    <form [formGroup]="formImforSupp" (ngSubmit)="subFormSupp()">
       <div class="subContMainForm1">
         <h4>datos iniciales</h4>
         <div>
           <label for="">elemento</label>
-          <input type="text">
+          <input type="text" formControlName="element" name="element">
         </div>
         <div>
           <label for="">nombre de quien llama</label>
-          <input type="text">
+          <input type="text" formControlName="user" name="user">
         </div>
         <div>
           <label for="">telefono</label>
-          <input type="text">
+          <input type="text" formControlName="phone" name="phone">
         </div>
         <div>
           <label for="">cargo</label>
-          <select name="" id="">
-            <option value="">escoger</option>
-            <option value="">escoger</option>
-            <option value="">escoger</option>
-            <option value="">escoger</option>
+          <select id="" formControlName="position" name="position">
+            <option value="" selected>escoga un cargo</option>
+            <option value="ingeniero quimico">ingeniero quimico</option>
+            <option value="estudiante de quimica">estudiante de quimica</option>
+            <option value="farmaceuta">farmaceuta</option>
           </select>
         </div>
+        <input type="submit" value="enviar">
       </div>
 
       <div class="subContMainForm2">
         <h4>datos de la falla</h4>
         <div>
           <label for="">descripcion del usuario</label>
-          <textarea name="" id="" cols="" rows=""></textarea>
+          <textarea formControlName="descUser" name="descUser"></textarea>
         </div>
         <h4>diagnostico del agente</h4>
         <div>
           <label for="">Diagnostico</label>
-          <select name="" id="">
-            <option value="">escoger</option>
-            <option value="">escoger</option>
-            <option value="">escoger</option>
-            <option value="">escoger</option>
+          <select id="" formControlName="diagAgent" name="diagAgent">
+            <option value="">escoja una causa de la falla</option>
+            <option value="mal uso del elemento">mal uso del elemento</option>
+            <option value="elemento equivocado">elemento equivocado</option>
+            <option value="grupo equivocado">grupo equivocado</option>
+            <option value="proposito incorrecto">proposito incorrecto</option>
           </select>
         </div>
       </div>

@@ -7,7 +7,7 @@ import { InformElementComponent } from './inform-element/inform-element.componen
 import { CalculatorComponent } from './calculator/calculator.component';
 import { HomeButtonComponent } from './home-button/home-button.component';
 import { TitleComponentComponent } from './title-component/title-component.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 
 
@@ -16,7 +16,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     InformElementRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class InformElementModule { }
