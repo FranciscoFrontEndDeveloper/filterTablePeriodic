@@ -5,25 +5,21 @@
     <button>filtrar</button>
   </div>
   <div>
-    <select (change)="selectGroupBlock()" [(ngModel)]="opcionElegida" [ngStyle]="{background: numberStyle}">
+    <select (change)="selectGroupBlock(opcionElegida)" [(ngModel)]="opcionElegida" [ngStyle]="{background: numberStyle}">
       <option value="" selected>seleccione un grupo</option>
-      <option value="metales alcalinos">metales alcalinos</option>
-      <option value="alcalinoterreos">alcalinoterreos</option>
-      <option value="metales de transicion">metales de transicion</option>
-      <option value="otros metales">otros metales</option>
-      <option value="metaloides">metaloides</option>
-      <option value="no metales">no metales</option>
-      <option value="halogenos">halogenos</option>
-      <option value="gases nobles">gases nobles</option>
-      <option value="lactanidos">lactanidos</option>
-      <option value="actinidos">actinidos</option>
-      <!-- <option *ngFor="let optionSelected of optionSelecteds" [value]="optionSelected.optionss" selected>{{optionSelected.optionss}}</option> -->
+      <option value="alkali metal">metales alcalinos</option>
+      <option value="alkaline earth metal">alcalinoterreos</option>
+      <option value="transition metal">metales de transicion</option>
+      <option value="post-transition metal">otros metales</option>
+      <option value="metalloid">metaloides</option>
+      <option value="nonmetal">no metales</option>
+      <option value="halogen">halogenos</option>
+      <option value="noble gas">gases nobles</option>
+      <option value="lanthanoid">lactanidos</option>
+      <option value="actinoid">actinidos</option>
     </select>
   </div>
 </section>
-<!-- <section class="contMainHome">
-  <app-home-button></app-home-button>
-</section> -->
 <section class="contMainTable">
   <table >
     <tr>

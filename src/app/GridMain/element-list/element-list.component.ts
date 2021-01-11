@@ -55,44 +55,45 @@ public newElements: any;
   }
 
   selectGroupBlock(): any{
+    this.filterGroupBlock(this.opcionElegida);
     switch (this.opcionElegida){
-      case 'metales alcalinos': {
+      case 'alkali metal': {
         this.numberStyle = '#C2000B';
         break;
       }
-      case 'alcalinoterreos': {
+      case 'alkaline earth metal': {
         this.numberStyle = '#FE330A';
         break;
       }
-      case 'metales de transicion': {
+      case 'transition metal': {
         this.numberStyle = '#FEA621';
         break;
       }
-      case 'otros metales': {
+      case 'post-transition metal': {
         this.numberStyle = '#80C41C';
         break;
       }
-      case 'metaloides': {
+      case 'metalloid': {
         this.numberStyle = '#237D26';
         break;
       }
-      case 'no metales': {
+      case 'nonmetal': {
         this.numberStyle = '#349980';
         break;
       }
-      case 'halogenos': {
+      case 'halogen': {
         this.numberStyle = '#4A017D';
         break;
       }
-      case 'gases nobles': {
+      case 'noble gas': {
         this.numberStyle = '#82027E';
         break;
       }
-      case 'lactanidos': {
+      case 'lanthanoid': {
         this.numberStyle = '#0B0146';
         break;
       }
-      case 'actinidos': {
+      case 'actinoid': {
         this.numberStyle = '#2E58A6';
         break;
       }
