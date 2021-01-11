@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { element } from 'protractor';
 
 @Injectable({
   providedIn: 'root'
@@ -278,5 +279,10 @@ export class ElementsService {
       return this.element;
     }
 
+    filterGroupBlock(groupBlock: string): any{
+      this.elements = this.getAllElements();
+      this.element = this.elements.filter((item: any) => item.groupBlock === groupBlock);
+      return this.element;
+    }
   constructor() { }
 }

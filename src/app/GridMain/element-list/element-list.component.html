@@ -1,11 +1,11 @@
 <section class="containerMain">
 <section class="contMainTitle">
   <div>
-    <input type="number" placeholder="Ingrese el numero atomico del elemento que desea filtrar" [(ngModel)]="numberAtomic"  (input)="filterAtomicNumber(numberAtomic)">
+    <input type="number" placeholder="Ingrese el numero atomico del elemento que desea filtrar" [(ngModel)]="numberAtomic"  (input)="filterAtomicNumber(numberAtomic)" min="0" max="118">
     <button>filtrar</button>
   </div>
   <div>
-    <select (change)="seleccion()" [(ngModel)]="opcionElegida" [ngStyle]="{background: numberStyle}">
+    <select (change)="selectGroupBlock()" [(ngModel)]="opcionElegida" [ngStyle]="{background: numberStyle}">
       <option value="" selected>seleccione un grupo</option>
       <option value="metales alcalinos">metales alcalinos</option>
       <option value="alcalinoterreos">alcalinoterreos</option>

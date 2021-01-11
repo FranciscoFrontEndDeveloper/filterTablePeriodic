@@ -27,6 +27,7 @@ public newElements: any;
   ngOnInit(): void {
     this.getAllElements();
 
+
   }
 
 
@@ -37,15 +38,23 @@ public newElements: any;
   filterAtomicNumber(numberAtomic: number): InterfazElement[] {
     if (numberAtomic > 0) {
       this.elements = this.elementsService.filterAtomicNumber(numberAtomic);
+    } else if (numberAtomic === 0) {
+      this.getAllElements();
+    }
+    return this.elements;
+  }
+
+  filterGroupBlock(optionGroup: string): InterfazElement[]{
+    if (optionGroup !== '') {
+      this.elements = this.elementsService.filterGroupBlock(optionGroup);
       console.log(this.elements);
-      console.log(this.numberAtomic);
     } else {
       this.getAllElements();
     }
     return this.elements;
   }
 
-  seleccion(): any{
+  selectGroupBlock(): any{
     switch (this.opcionElegida){
       case 'metales alcalinos': {
         this.numberStyle = '#C2000B';
