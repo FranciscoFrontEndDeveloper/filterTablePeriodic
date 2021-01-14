@@ -7,6 +7,10 @@ import { element } from 'protractor';
 export class ElementsService {
   public element: any;
   public elements: any;
+  public procediments: any;
+  public procediment2: any;
+  public procediment3: any;
+  public arrayProcess: any;
 
     getAllElements(): any{
       this.elements = [
@@ -284,5 +288,22 @@ export class ElementsService {
       this.element = this.elements.filter((item: any) => item.groupBlock === groupBlock);
       return this.element;
     }
+
+    arrayProcediment(): any{
+      this.procediments = [
+        {falla: 'mal uso del elemento', solucion: 'solucion 1'},
+        {falla: 'elemento equivocado', solucion: 'solucion 2'},
+        {falla: 'grupo equivocado', solucion: 'solucion 3'},
+        {falla: 'proposito incorrecto', solucion: 'solucion 4'},
+      ];
+      return this.procediments;
+    }
+
+    filterProcediment(itemSupport: string): any{
+      this.procediments = this.arrayProcediment();
+      this.arrayProcess = this.procediments.filter((item: any) => item.falla === itemSupport);
+      return this.arrayProcess;
+    }
+
   constructor() { }
 }

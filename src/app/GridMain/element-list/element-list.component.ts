@@ -53,7 +53,6 @@ public newElements: any;
     }
     return this.elements;
   }
-
   selectGroupBlock(): any{
     this.filterGroupBlock(this.opcionElegida);
     switch (this.opcionElegida){
@@ -107,3 +106,4 @@ public newElements: any;
 
 
 }
+

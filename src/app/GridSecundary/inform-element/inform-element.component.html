@@ -42,8 +42,8 @@
         <h4>diagnostico del agente</h4>
         <div>
           <label for="">Diagnostico</label>
-          <select id="" formControlName="diagAgent" name="diagAgent">
-            <option value="">escoja una causa de la falla</option>
+          <select [(ngModel)]="itemSupport"   (change)="arrayProcediment()" formControlName="diagAgent" name="diagAgent">
+            <option value="" selected>escoja una causa de la falla</option>
             <option value="mal uso del elemento">mal uso del elemento</option>
             <option value="elemento equivocado">elemento equivocado</option>
             <option value="grupo equivocado">grupo equivocado</option>
@@ -55,12 +55,8 @@
       <div class="subContMainForm3">
         <h4>procedimiento de soporte sujerido</h4>
         <div>
-          <ol>
-            <li>Lorem ipsum dolor sit amet.</li>
-            <li>Lorem ipsum dolor sit amet.</li>
-            <li>Lorem ipsum dolor sit amet.</li>
-            <li>Lorem ipsum dolor sit amet.</li>
-            <li>Lorem ipsum dolor sit amet.</li>
+          <ol *ngFor="let arrayProce of arrayProcess">
+            <li>{{arrayProce.solucion}}</li>
           </ol>
         </div>
       </div>
@@ -68,6 +64,7 @@
   </section>
   <section class="contaMainNotes">
     <div>
+      <h4>{{formImforSupp.value.element}} - {{formImforSupp.value.diagAgent}}</h4>
       <ol>
         <li>Lorem ipsum dolor sit amet.</li>
         <li>Lorem ipsum dolor sit amet.</li>
@@ -77,7 +74,7 @@
       </ol>
     </div>
   </section>
-  <section class="contaMainButtons">
+  <!-- <section class="contaMainButtons">
     <div>
       <input type="button" value="ver notas">
     </div>
@@ -87,5 +84,5 @@
     <div>
       <input type="button" value="guardar notas">
     </div>
-  </section>
+  </section> -->
 </section>

@@ -1,46 +1,47 @@
 <section class="containerMain">
-<section class="contMainTitle">
-  <div>
-    <input type="number" placeholder="Ingrese el numero atomico del elemento que desea filtrar" [(ngModel)]="numberAtomic"  (input)="filterAtomicNumber(numberAtomic)" min="0" max="118">
-    <button>filtrar</button>
-  </div>
-  <div>
-    <select (change)="selectGroupBlock(opcionElegida)" [(ngModel)]="opcionElegida" [ngStyle]="{background: numberStyle}">
-      <option value="" selected>seleccione un grupo</option>
-      <option value="alkali metal">metales alcalinos</option>
-      <option value="alkaline earth metal">alcalinoterreos</option>
-      <option value="transition metal">metales de transicion</option>
-      <option value="post-transition metal">otros metales</option>
-      <option value="metalloid">metaloides</option>
-      <option value="nonmetal">no metales</option>
-      <option value="halogen">halogenos</option>
-      <option value="noble gas">gases nobles</option>
-      <option value="lanthanoid">lactanidos</option>
-      <option value="actinoid">actinidos</option>
-    </select>
-  </div>
-</section>
-<section class="contMainTable">
-  <table >
-    <tr>
-      <th [ngStyle]="{background: numberStyle}">número atómico</th>
-      <th [ngStyle]="{background: numberStyle}">símbolo</th>
-      <th [ngStyle]="{background: numberStyle}">nombre</th>
-      <th [ngStyle]="{background: numberStyle}">masa atomica</th>
-      <th [ngStyle]="{background: numberStyle}">estado</th>
-      <th [ngStyle]="{background: numberStyle}">grupo</th>
-      <th [ngStyle]="{background: numberStyle}">año de descubrimiento</th>
-    </tr>
-    <tr *ngFor="let element of elements  ">
-      <td>{{element.atomicNumber}}</td>
-      <td>{{element.symbol}}</td>
-      <td>{{element.name}}</td>
-      <td>{{element.atomicMass}}</td>
-      <td>{{element.standardState}}</td>
-      <td>{{element.groupBlock}}</td>
-      <td>{{element.yearDiscovered}}</td>
-    </tr>
-  </table>
-</section>
+  <section class="contMainTitle">
+    <div>
+      <input type="number" placeholder="Ingrese el numero atomico del elemento que desea filtrar"
+        [(ngModel)]="numberAtomic" (input)="filterAtomicNumber(numberAtomic)" min="0" max="118">
+      <button>filtrar</button>
+    </div>
+    <div>
+      <select (change)="selectGroupBlock()" [(ngModel)]="opcionElegida" [ngStyle]="{background: numberStyle}">
+        <option value="" selected>seleccione un grupo</option>
+        <option value="alkali metal">metales alcalinos</option>
+        <option value="alkaline earth metal">alcalinoterreos</option>
+        <option value="transition metal">metales de transicion</option>
+        <option value="post-transition metal">otros metales</option>
+        <option value="metalloid">metaloides</option>
+        <option value="nonmetal">no metales</option>
+        <option value="halogen">halogenos</option>
+        <option value="noble gas">gases nobles</option>
+        <option value="lanthanoid">lactanidos</option>
+        <option value="actinoid">actinidos</option>
+      </select>
+    </div>
+  </section>
+  <section class="contMainTable">
+    <table>
+      <tr>
+        <th [ngStyle]="{background: numberStyle}">número atómico</th>
+        <th [ngStyle]="{background: numberStyle}">símbolo</th>
+        <th [ngStyle]="{background: numberStyle}">nombre</th>
+        <th [ngStyle]="{background: numberStyle}">masa atomica</th>
+        <th [ngStyle]="{background: numberStyle}">estado</th>
+        <th [ngStyle]="{background: numberStyle}">grupo</th>
+        <th [ngStyle]="{background: numberStyle}">año de descubrimiento</th>
+      </tr>
+      <tr *ngFor="let element of elements  ">
+        <td>{{element.atomicNumber}}</td>
+        <td>{{element.symbol}}</td>
+        <td>{{element.name}}</td>
+        <td>{{element.atomicMass}}</td>
+        <td>{{element.standardState}}</td>
+        <td>{{element.groupBlock}}</td>
+        <td>{{element.yearDiscovered}}</td>
+      </tr>
+    </table>
+  </section>
 
 </section>
