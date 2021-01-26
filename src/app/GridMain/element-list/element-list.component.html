@@ -32,7 +32,7 @@
         <th [ngStyle]="{background: numberStyle}">grupo</th>
         <th [ngStyle]="{background: numberStyle}">año de descubrimiento</th>
       </tr>
-      <tr *ngFor="let element of elements  ">
+      <tr *ngFor="let element of elements | paginate: {itemsPerPage: 10, currentPage: page} ">
         <td>{{element.atomicNumber}}</td>
         <td>{{element.symbol}}</td>
         <td>{{element.name}}</td>
@@ -42,6 +42,9 @@
         <td>{{element.yearDiscovered}}</td>
       </tr>
     </table>
+    <pagination-controls (pageChange)="page = $event" previousLabel="Anterior" nextLabel="Siguiente">
+
+    </pagination-controls>
   </section>
 
 </section>

@@ -16,12 +16,14 @@ public opcionElegida: string;
 public numberStyle: string;
 public numberAtomic: number;
 public newElements: any;
+public page: number;
   constructor(private elementsService: ElementsService) {
     this.opcionElegida = '';
     this.numberStyle = '';
     this.numberAtomic = 0;
     this.newElements = [];
     this.elements = [];
+    this.page = 0;
    }
 
   ngOnInit(): void {

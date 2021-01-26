@@ -9,6 +9,7 @@ import { ElementListComponent } from './GridMain/element-list/element-list.compo
 import { CreditsComponent } from './GridMain/credits/credits.component';
 import { FormsModule } from '@angular/forms';
 import { NumberAtomicPipe } from './Pipes/number-atomic.pipe';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { NumberAtomicPipe } from './Pipes/number-atomic.pipe';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
