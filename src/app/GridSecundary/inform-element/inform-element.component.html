@@ -8,7 +8,7 @@
   <section class="contaMainForm">
     <form [formGroup]="formImforSupp" (ngSubmit)="subFormSupp()">
       <div class="subContMainForm1">
-        <h4>datos iniciales</h4>
+        <h4>1 - datos iniciales</h4>
         <div>
           <label for="">elemento</label>
           <input type="text" formControlName="element" name="element">
@@ -30,18 +30,16 @@
             <option value="farmaceuta">farmaceuta</option>
           </select>
         </div>
-        <input type="submit" value="enviar">
       </div>
 
       <div class="subContMainForm2">
-        <h4>datos de la falla</h4>
+        <h4>2 - datos de la falla</h4>
         <div>
           <label for="">descripcion del usuario</label>
           <textarea formControlName="descUser" name="descUser"></textarea>
         </div>
-        <h4>diagnostico del agente</h4>
         <div>
-          <label for="">Diagnostico</label>
+          <label for="">Diagnostico del agente</label>
           <select [(ngModel)]="itemSupport"   (change)="arrayProcediment()" formControlName="diagAgent" name="diagAgent">
             <option value="" selected>escoja una causa de la falla</option>
             <option value="mal uso del elemento">mal uso del elemento</option>
@@ -50,10 +48,13 @@
             <option value="proposito incorrecto">proposito incorrecto</option>
           </select>
         </div>
+        <div>
+          <input type="submit" value="enviar" data-toggle="modal" data-target="#exampleModal">
+        </div>
       </div>
 
       <div class="subContMainForm3">
-        <h4>procedimiento de soporte sujerido</h4>
+        <h4>3 - procedimiento</h4>
         <div>
           <ol *ngFor="let arrayProce of arrayProcess">
             <li>{{arrayProce.solucion}}</li>
@@ -62,27 +63,28 @@
       </div>
     </form>
   </section>
-  <section class="contaMainNotes">
-    <div>
-      <h4>{{formImforSupp.value.element}} - {{formImforSupp.value.diagAgent}}</h4>
-      <ol>
-        <li>Lorem ipsum dolor sit amet.</li>
-        <li>Lorem ipsum dolor sit amet.</li>
-        <li>Lorem ipsum dolor sit amet.</li>
-        <li>Lorem ipsum dolor sit amet.</li>
-        <li>Lorem ipsum dolor sit amet.</li>
-      </ol>
-    </div>
-  </section>
-  <!-- <section class="contaMainButtons">
-    <div>
-      <input type="button" value="ver notas">
-    </div>
-    <div>
-      <input type="button" value="ver notas y guardar">
-    </div>
-    <div>
-      <input type="button" value="guardar notas">
-    </div>
-  </section> -->
 </section>
+
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">notas finales del caso</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger text-white" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
