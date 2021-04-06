@@ -31,7 +31,6 @@
     textarea
       resize: none
   .subContMainForm1
-    display: grid
     grid-column: 1/2
     grid-template-rows: auto repeat(4,1fr)
     row-gap: 10px
@@ -43,7 +42,6 @@
       label
         text-transform: capitalize
   .subContMainForm2
-    display: grid
     grid-column: 2/3
     grid-template-rows: repeat(5, auto)
     row-gap: 10px
@@ -57,35 +55,55 @@
     div:nth-child(3)
       display: grid
       input
-        width: 50%
+        width: 100px
   .subContMainForm3
     grid-column: 3/4
-    div
-      width: 100%
-.contaMainNotes
-  div
     ol
       li
-        color: red
-        margin-left: 10px
-
-.contaMainButtons
-  display: grid
-  grid-template-columns: repeat(3, auto)
-  justify-content: center
-  column-gap: 20px
-  div
-    input
-      padding: 5px 20px
-      border: 2px solid lime
-      background: none
+        margin-left: 20px
+        font-size: 14px
+    div
+      width: 100%
+      .optionYesNo
+        display: grid
+        grid-template-columns: repeat(2, 1fr )
+        justify-items: center
+        margin-top: 10px
+        input
+          width: 100px
+          padding: 0
+          text-transform: capitalize
+          font-size: 14px
+          background: none
+          font-weight: bold
+          transition: all .5s ease
+        input:nth-child(1)
+          color: lime
+          border: 1px solid lime
+          &:hover
+            background: lime
+            color: white
+        input:nth-child(2)
+          border: 1px solid red
+          color: red
+          &:hover
+            background: red
+            color: white
+.modal-content
+  width: 650px
+.modal-header
+  h5
+    text-transform: capitalize
+.modal-body
+  h5
+    text-align: center
+    text-transform: uppercase
+  ul
+    li
+      list-style: none
       text-transform: capitalize
-      color: lime
       font-weight: bold
-      transition: all .5s
-      &:hover
-        background: lime
-        color: white
+      span
 
 
 

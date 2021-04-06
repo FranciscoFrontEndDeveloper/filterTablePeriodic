@@ -13,6 +13,7 @@ public formImforSupp: any;
 public ArraySupporPack: any;
 public arrayProcess: any;
 public itemSupport: any;
+public optionProcessResp: any;
 
 
   constructor(private formBuilder: FormBuilder, private elementsService: ElementsService) {
@@ -27,10 +28,12 @@ public itemSupport: any;
    }
 
   ngOnInit(): void {
+    console.log(this.optionProcessResp);
   }
 
   subFormSupp(): void{
     console.log(this.formImforSupp.value);
+    console.log(this.formImforSupp.value.element);
   }
 
   arrayProcediment(): any{

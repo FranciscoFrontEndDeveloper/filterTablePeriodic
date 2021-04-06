@@ -40,7 +40,7 @@
         </div>
         <div>
           <label for="">Diagnostico del agente</label>
-          <select [(ngModel)]="itemSupport"   (change)="arrayProcediment()" formControlName="diagAgent" name="diagAgent">
+          <select [(ngModel)]="itemSupport" (change)="arrayProcediment()" formControlName="diagAgent" name="diagAgent">
             <option value="" selected>escoja una causa de la falla</option>
             <option value="mal uso del elemento">mal uso del elemento</option>
             <option value="elemento equivocado">elemento equivocado</option>
@@ -56,8 +56,38 @@
       <div class="subContMainForm3">
         <h4>3 - procedimiento</h4>
         <div>
+          <label for="">proceso de soporte sugerido</label>
           <ol *ngFor="let arrayProce of arrayProcess">
-            <li>{{arrayProce.solucion}}</li>
+            <li>{{arrayProce.solucion}}
+              <div class="optionYesNo">
+                <input type="button" value="si">
+                <input type="button" value="no">
+              </div>
+            </li>
+            <li>{{arrayProce.solucion2}}
+              <div class="optionYesNo">
+                <input type="button" value="si">
+                <input type="button" value="no">
+              </div>
+            </li>
+            <li>{{arrayProce.solucion3}}
+              <div class="optionYesNo">
+                <input type="button" value="si">
+                <input type="button" value="no">
+              </div>
+            </li>
+            <li>{{arrayProce.solucion4}}
+              <div class="optionYesNo">
+                <input type="button" value="si">
+                <input type="button" value="no">
+              </div>
+            </li>
+            <li>{{arrayProce.solucion5}}
+              <div class="optionYesNo">
+                <input type="button" value="si">
+                <input type="button" value="no">
+              </div>
+            </li>
           </ol>
         </div>
       </div>
@@ -70,17 +100,35 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">notas finales del caso</h5>
+        <h5 class="modal-title" id="exampleModalLabel">{{formImforSupp.value.element}} -
+          {{formImforSupp.value.diagAgent}} </h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ...
+        <h5>Informacion</h5>
+        <ul>
+          <li>elemento: <span>{{formImforSupp.value.element}}</span></li>
+          <li>nombre de quien llama: <span>{{formImforSupp.value.user}}</span></li>
+          <li>telefono: <span>{{formImforSupp.value.phone}}</span></li>
+          <li>cargo: <span>{{formImforSupp.value.position}}</span></li>
+          <li>descripcion del usuario: <span>{{formImforSupp.value.descUser}}</span></li>
+          <li>Diagnostico del agente: <span>{{formImforSupp.value.diagAgent}}</span></li>
+        </ul>
+        <h5>soporte realizado</h5>
+        <ol *ngFor="let arrayProce of arrayProcess">
+          <li>{{arrayProce.solucion}}</li>
+          <li>{{arrayProce.solucion2}}</li>
+          <li>{{arrayProce.solucion3}}</li>
+          <li>{{arrayProce.solucion4}}</li>
+          <li>{{arrayProce.solucion5}}</li>
+        </ol>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger text-white" data-dismiss="modal">Close</button>
