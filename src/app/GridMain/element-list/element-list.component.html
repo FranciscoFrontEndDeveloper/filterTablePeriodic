@@ -2,8 +2,8 @@
   <section class="contMainTitle">
     <div>
       <input type="number" placeholder="Ingrese el numero atomico del elemento que desea filtrar"
-        [(ngModel)]="numberAtomic" (input)="filterAtomicNumber(numberAtomic)" min="0" max="118">
-      <button>filtrar</button>
+        [(ngModel)]="numberAtomic"  min="0" max="118">
+      <button (click)="filterAtomicNumber(numberAtomic)">filtrar</button>
     </div>
     <div>
       <select (change)="selectGroupBlock()" [(ngModel)]="opcionElegida" [ngStyle]="{background: numberStyle}">
