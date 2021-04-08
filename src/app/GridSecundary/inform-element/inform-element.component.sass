@@ -8,9 +8,13 @@
     display: grid
     align-items: center
     justify-content: center
+.contMainHome
+  nav
+    display: grid
+    grid-template-columns: repeat(3, 1fr )
+
 .contaMainForm
-  padding: 20px 0
-  border-bottom: 2px solid #ccc
+  padding-top: 5px
   display: grid
   form
     grid-template-columns: repeat(3, 1fr )
@@ -27,7 +31,7 @@
       border-radius: 5px
       outline: none
       width: 100%
-      padding-left: 10px
+      padding: 5px 0 5px 10px
     textarea
       resize: none
   .subContMainForm1
@@ -54,6 +58,8 @@
         text-transform: capitalize
     div:nth-child(3)
       display: grid
+      select
+        padding: 5px
       input
         width: 100px
   .subContMainForm3
@@ -104,6 +110,24 @@
       text-transform: capitalize
       font-weight: bold
       span
+  dl
+    dt
+      font-weight: normal
+    dd
+      font-weight: bold
+      text-transform: uppercase
+.mainForm2Btn
+  display: grid
+  justify-items: center
+  input
+    margin-top: 20px
+    padding: 5px 0
+    text-transform: uppercase
+    background: lime
+    color: white
+    font-weight: bold
+    border: none
+    width: 150px !important
 
 
 

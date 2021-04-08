@@ -44,6 +44,7 @@ export class CalculatorComponent implements OnInit {
   ngOnInit(): void {
     this.addZero();
     this.weeksLoads();
+    this.dateCurrent2 = dayjs().format('YYYY-MM-DD');
   }
 
   addZero(): void {
@@ -107,7 +108,6 @@ export class CalculatorComponent implements OnInit {
       case this.dateBetween5:
         this.tokendQuality = Math.round(this.dateCurrent3 / 4);
         break;
-
       default:
         this.tokendQuality = Math.round(this.dateCurrent3 / 1);
         break;

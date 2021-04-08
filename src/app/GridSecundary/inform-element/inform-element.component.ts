@@ -23,17 +23,21 @@ public optionProcessResp: any;
       phone:     [''],
       position:  [''],
       descUser:  [''],
-      diagAgent: ['']
+      diagAgent: [''],
+      optionSupportForm: ['']
     });
+
+    this.itemSupport = 'escoja una causa de la falla';
    }
 
   ngOnInit(): void {
-    console.log(this.optionProcessResp);
+    // console.log(this.optionProcessResp);
   }
 
   subFormSupp(): void{
-    console.log(this.formImforSupp.value);
-    console.log(this.formImforSupp.value.element);
+    // console.log(this.formImforSupp.value);
+    // console.log(this.formImforSupp.value.element);
+    // console.log(this.formImforSupp.value.optionSupportForm);
   }
 
   arrayProcediment(): any{

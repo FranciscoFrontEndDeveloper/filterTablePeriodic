@@ -4,6 +4,12 @@
   </header>
   <section class="contMainHome">
     <app-home-button></app-home-button>
+    <h5>instrucciones para usar el formulario de soporte</h5>
+    <nav>
+      <span>1 - llene todos los campos de formulario</span>
+      <span>2 - seleciones un posible diagnostico</span>
+      <span>3 - escoja entre si o no a cada opcion que se despligue luego de click en enviar</span>
+    </nav>
   </section>
   <section class="contaMainForm">
     <form [formGroup]="formImforSupp" (ngSubmit)="subFormSupp()">
@@ -41,14 +47,14 @@
         <div>
           <label for="">Diagnostico del agente</label>
           <select [(ngModel)]="itemSupport" (change)="arrayProcediment()" formControlName="diagAgent" name="diagAgent">
-            <option value="" selected>escoja una causa de la falla</option>
+            <option value="">escoja una causa de la falla</option>
             <option value="mal uso del elemento">mal uso del elemento</option>
             <option value="elemento equivocado">elemento equivocado</option>
             <option value="grupo equivocado">grupo equivocado</option>
             <option value="proposito incorrecto">proposito incorrecto</option>
           </select>
         </div>
-        <div>
+        <div class="mainForm2Btn">
           <input type="submit" value="enviar" data-toggle="modal" data-target="#exampleModal">
         </div>
       </div>
@@ -60,8 +66,8 @@
           <ol *ngFor="let arrayProce of arrayProcess">
             <li>{{arrayProce.solucion}}
               <div class="optionYesNo">
-                <input type="button" value="si">
-                <input type="button" value="no">
+                <input type="button" value="si" >
+                <input type="button" value="no" >
               </div>
             </li>
             <li>{{arrayProce.solucion2}}
@@ -122,13 +128,19 @@
           <li>Diagnostico del agente: <span>{{formImforSupp.value.diagAgent}}</span></li>
         </ul>
         <h5>soporte realizado</h5>
-        <ol *ngFor="let arrayProce of arrayProcess">
-          <li>{{arrayProce.solucion}}</li>
-          <li>{{arrayProce.solucion2}}</li>
-          <li>{{arrayProce.solucion3}}</li>
-          <li>{{arrayProce.solucion4}}</li>
-          <li>{{arrayProce.solucion5}}</li>
-        </ol>
+
+        <dl *ngFor="let arrayProce of arrayProcess">
+          <dt>{{arrayProce.solucion}}</dt>
+          <dd>-si </dd>
+          <dt>{{arrayProce.solucion2}}</dt>
+          <dd>-si </dd>
+          <dt>{{arrayProce.solucion3}}</dt>
+          <dd>-no</dd>
+          <dt>{{arrayProce.solucion4}}</dt>
+          <dd>-si</dd>
+          <dt>{{arrayProce.solucion5}}</dt>
+          <dd>-no</dd>
+        </dl>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger text-white" data-dismiss="modal">Close</button>
